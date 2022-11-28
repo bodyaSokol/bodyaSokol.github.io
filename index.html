@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+	<link rel="icon" href="img/favicon/favicon.ico"><!-- 32×32 -->
+	<title>Главная страница</title>
+</head>
+<body>
+	<div class="popup_wrap" id="popup_wrap">
+		<div class="popup">
+			<div class="popup_close" id="popup_close">
+				<img src="img/close_popup.png" alt="">
+			</div>
+			<div class="popup_content popup_type_registration">
+				<p class="popup_content_title">Регистрация</p>
+				<img src="img/ellipse_with_user.png" class="popup_content_image" alt="">
+				<form action="" class="popup_content_form">
+					<label for="reg_input" class="popup_content_form_label">Реферальный код</label>
+					<input type="text" name="ref_code" id="reg_input" class="popup_content_form_input" placeholder="Впишите код сюда">
+					<p class="popup_content_form_text">Если у вас нет кода, зайдите в наш <a href="https://t.me/q_coin_online">ТГ канал</a></p>
+					<button type="submit" class="popup_content_form_submit">Зарегистрироваться</button>
+				</form>
+			</div>
+			<div class="popup_content popup_type_authorization">
+				<p class="popup_content_title">Авторизация</p>
+				<img src="img/ellipse_with_user.png" class="popup_content_image" alt="">
+				<form action="" class="popup_content_form">
+					<label for="email_input" class="popup_content_form_label">Email</label>
+					<input type="text" name="email" id="email_input" class="popup_content_form_input" placeholder="Впишите почту сюда">
+					<label for="password_input" class="popup_content_form_label">Пароль</label>
+					<input type="password" name="password" id="password_input" class="popup_content_form_input" placeholder="Впишите пароль сюда">
+					<button type="submit" class="popup_content_form_submit">Войти</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="drop_down_menu" id="drop_down_menu">
+		<div class="drop_down_menu_user">
+			<img src="img/monkey_face.png" alt="" class="drop_down_menu_user_image">
+			<div class="drop_down_menu_user_name">Профиль</div>
+		</div>
+		<div class="drop_down_menu_message">
+			Вы не авторизованы :(
+		</div>
+		<div class="drop_down_menu_buttons">
+			<button class="drop_down_menu_buttons_element drop_down_menu_buttons_element_gradient" onclick="showPopup('popup_type_authorization')">
+				<div class="drop_down_menu_buttons_element_image">
+					<img src="img/logout_white.png" alt="">
+				</div>
+				<div class="drop_down_menu_buttons_element_text">
+					Войти
+				</div>
+			</button>
+			<button class="drop_down_menu_buttons_element" onclick="showPopup('popup_type_registration')">
+				<div class="drop_down_menu_buttons_element_image">
+					<img src="img/reg_ico.png" alt="">
+				</div>
+				<div class="drop_down_menu_buttons_element_text">
+					Регистрация
+				</div>
+			</button>
+			<a class="drop_down_menu_buttons_element" href="https://t.me/q_coin_online">
+				<div class="drop_down_menu_buttons_element_image">
+					<img src="img/letter_ico.png" alt="">
+				</div>
+				<div class="drop_down_menu_buttons_element_text">
+					Написать в TG
+				</div>
+			</a>
+			<a class="drop_down_menu_buttons_element">
+				<div class="drop_down_menu_buttons_element_image">
+					<img src="img/conversations_ico.png" alt="">
+				</div>
+				<div class="drop_down_menu_buttons_element_text">
+					Поддержка
+				</div>
+			</a>
+		</div>
+		<div class="language_switcher" id="language_switcher_2">
+			<div class="language_switcher_visible">
+				<a class="language_item">
+					<img src="img/ru_flag.png" alt="">
+					<span>RU</span>
+				</a>
+				<img class="language_switcher_show_unvisible" src="img/down_language_arrow.png" alt="">
+			</div>
+			<div class="language_switcher_unvisible" id="language_switcher_unvisible_2">
+				<a href="#" class="language_item">
+					<img src="img/en_flag.png" alt="">
+					<span>EN</span>
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="welcome_block">
+		<div class="welcome_block_header">
+			<div class="welcome_block_header_item mobile_blind">
+				<button class="login_button" onclick="showPopup('popup_type_authorization')">
+					<img src="img/Logout.png" alt="">
+					<span>Войти</span>
+				</button>
+			</div>
+			<div class="welcome_block_header_item">
+				<img src="img/logo.png" alt="" class="logo">
+			</div>
+			<div class="welcome_block_header_item mobile_blind">
+				<a href="https://t.me/q_coin_online">
+					<img src="img/telegram_icon.png" alt="" class="telegram_icon">
+				</a>
+				<div class="language_switcher" id="language_switcher">
+					<div class="language_switcher_visible">
+						<a class="language_item">
+							<img src="img/ru_flag.png" alt="">
+							<span>RU</span>
+						</a>
+						<img class="language_switcher_show_unvisible" src="img/down_language_arrow.png" alt="">
+					</div>
+					<div class="language_switcher_unvisible" id="language_switcher_unvisible">
+						<a href="#" class="language_item">
+							<img src="img/en_flag.png" alt="">
+							<span>EN</span>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="welcome_block_header_item mobile_visibility" id="drop_down_menu_switcher">
+				<div class="user_avatar_with_button">
+					<img class="user_avatar_with_button_avatar" src="img/monkey_face.png" alt="">
+					<img class="user_avatar_with_button_arrow" src="img/user_avatar_arrow.png" alt="">
+				</div>
+			</div>
+		</div>
+		<div class="welcome_block_main">
+			<div class="welcome_block_main_absoluteElems">
+				<img src="img/colorful_wavy_line.png" class="welcome_block_main_absoluteElems_line" alt="">
+				<img src="img/rotated_image.png" alt="" class="welcome_block_main_absoluteElems_line_rotated">
+			</div>
+			<div class="welcome_block_main_absoluteElems">
+				<img src="img/phone.png" class="welcome_block_main_absoluteElems_phone"alt="">
+			</div>
+			<div class="welcome_block_main_sides">
+				<div class="welcome_block_main_sides_left_header">
+					Quantum <br> coin
+				</div>
+				<div class="welcome_block_main_sides_right_header yellow_text">
+					Вне <br> санкций
+				</div>
+			</div>
+			<div class="welcome_block_main_addition_blocks">
+				<div class="welcome_block_main_addition_blocks_element">
+					<span class="yellow_text">X2 монет</span>  первым <br>10 000 участникам
+				</div>
+				<div class="welcome_block_main_addition_blocks_element wbmab2">
+					<span class="blue_text">Стейкинг до 25% в месяц</span> <br> для первых участников
+				</div>
+			</div>
+			<div class="welcome_block_main_gradient">
+				<img src="img/colorful_straight_line.png" alt="" class="welcome_block_main_gradient_line">
+				<img src="img/wavy_gradient_for_straight_line.png" alt="">
+			</div>
+			<div class="welcome_block_main_gradient_captions">
+				<div class="welcome_block_main_gradient_captions_element">
+					0
+				</div>
+				<div class="welcome_block_main_gradient_captions_element">
+					43
+				</div>
+				<div class="welcome_block_main_gradient_captions_element">
+					10000
+				</div>
+			</div>
+			<div class="welcome_block_main_bottom">
+				<span>До старта проекта осталось активировать</span>
+				<span>9 957 кошельков</span>
+			</div>
+		</div>
+		<div class="welcome_block_bottom">
+			<div class="welcome_block_bottom_currency">
+				<div class="welcome_block_bottom_currency_text">
+					300742.41 QC ~ <span class="green_text">1 501 389 RUB</span>
+				</div>
+				<img src="img/yellow_arrow.png" alt="" class="welcome_block_bottom_currency_yellowArrow">
+			</div>
+			<div class="welcome_block_bottom_grey">Сумма монет, накопленная <br> участниками</div>
+			<button class="welcome_block_bottom_registration yellow_background" onclick="showPopup('popup_type_registration')">
+				Регистрация
+			</button>
+		</div>
+	</div>
+	<script src="js/buttons_switchers.js"></script>
+</body>
+</html>
