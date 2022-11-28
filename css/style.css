@@ -270,7 +270,7 @@ body {
 						text-decoration: underline;
 						color: #1A98D5; }
 
-#popup_wrap, .popup_type_registration {
+#popup_wrap, .popup_type_registration, .popup_type_authorization {
 	display: none; }
 
 .welcome_block {
