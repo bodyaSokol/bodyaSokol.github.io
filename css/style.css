@@ -262,13 +262,16 @@ body {
 					max-width: 100%;
 					max-width: 100%;
 					display: block;
-					cursor: pointer; }
+					cursor: pointer;
+					margin-top: 20px; }
 				.popup_wrap .popup .popup_content .popup_content_form .popup_content_form_text {
 					text-align: left;
 					font-size: 12px; }
 					.popup_wrap .popup .popup_content .popup_content_form .popup_content_form_text a {
 						text-decoration: underline;
 						color: #1A98D5; }
+				.popup_wrap .popup .popup_content .popup_content_form .popup_content_form_text_red {
+					color: #FE0E39; }
 
 #popup_wrap, .popup_type_registration, .popup_type_authorization {
 	display: none; }

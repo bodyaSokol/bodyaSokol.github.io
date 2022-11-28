@@ -247,6 +247,7 @@ body{
 					max-width: 100%;
 					display: block;
 					cursor: pointer;
+					margin-top: 20px;
 				}
 				.popup_content_form_text{
 					text-align: left;
@@ -255,6 +256,9 @@ body{
 						text-decoration: underline;
 						color:#1A98D5;
 					}
+				}
+				.popup_content_form_text_red{
+					color:#FE0E39;
 				}
 			}
 		}
