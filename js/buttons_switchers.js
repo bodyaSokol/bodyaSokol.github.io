@@ -15,12 +15,14 @@ function showPopup(content_type){
 	if(!popup_wrap.style.display||popup_wrap.style.display=="none"){
 		popup_wrap.style.display="flex";
 		document.querySelector(`.${content_type}`).style.display="block";
-		document.body.style.overflow="hidden";
-		popup_close.addEventListener("click",function(){
-			popup_wrap.style.display="none";
-			document.querySelector(`.${content_type}`).style.display="none";
-			document.body.style.overflow="visible";
-			popup_close.removeEventListener("click",function(){})
+		const prevent = ev => ev.preventDefault();
+		document.addEventListener('wheel', prevent, {passive: false});
+		popup_wrap.addEventListener("click",function(e){
+			if(e.target.id=="popup_close"||e.target.id=="popup_wrap"){
+				popup_wrap.style.display="none";
+				document.querySelector(`.${content_type}`).style.display="none";
+				document.removeEventListener('wheel', prevent);
+			}
 		})
 	}
 }

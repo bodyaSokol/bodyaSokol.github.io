@@ -546,7 +546,8 @@ body {
 			font-weight: 600;
 			font-size: 20px;
 			line-height: 26px;
-			color: #121318; }
+			color: #121318;
+			border: 0; }
 			@media (max-width: 1000px) {
 				.welcome_block .welcome_block_bottom .welcome_block_bottom_registration {
 					padding: 15px;
