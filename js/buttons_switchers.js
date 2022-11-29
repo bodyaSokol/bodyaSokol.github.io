@@ -15,13 +15,15 @@ function showPopup(content_type){
 	if(!popup_wrap.style.display||popup_wrap.style.display=="none"){
 		popup_wrap.style.display="flex";
 		document.querySelector(`.${content_type}`).style.display="block";
-		const prevent = ev => ev.preventDefault();
-		document.addEventListener('wheel', prevent, {passive: false});
+		document.body.style.overflow = "hidden";
+		document.body.style.paddingRight = "8px";
 		popup_wrap.addEventListener("click",function(e){
 			if(e.target.id=="popup_close"||e.target.id=="popup_wrap"){
+				console.log("test");
 				popup_wrap.style.display="none";
 				document.querySelector(`.${content_type}`).style.display="none";
-				document.removeEventListener('wheel', prevent);
+				document.body.style.overflow = "visible";
+				document.body.style.paddingRight = "0px";
 			}
 		})
 	}

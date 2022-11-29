@@ -24,9 +24,20 @@ a{
 	transition:0.5s;
 }
 body{
+	transition: 0s;
 	background-color: $bgcolor;
 	padding: 0;
 	margin: 0;
+	&::-webkit-scrollbar-track {
+		background-color: #fff; /*Цвет скролла*/
+	} 
+	&::-webkit-scrollbar-thumb { 
+		border-radius: 5px; /*Закругление ползунка*/
+		background-color: #ccc; /*Цвет ползунка*/
+	} 
+	&::-webkit-scrollbar { 
+		width: 6px;  /*Толщина скролла*/
+	}
 }
 .yellow_text{color:$yellowColor}
 .yellow_background{
@@ -189,6 +200,7 @@ body{
 		max-width: 90%;
 		max-height: 90%;
 		border-radius: 10px;
+		overflow: auto;
 		.popup_close{
 			position: absolute;
 			top:20px;
