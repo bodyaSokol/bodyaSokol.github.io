@@ -201,6 +201,16 @@ body{
 		max-height: 90%;
 		border-radius: 10px;
 		overflow: auto;
+		&::-webkit-scrollbar-track {
+			background-color: transparent;
+		} 
+		&::-webkit-scrollbar-thumb { 
+			border-radius: 10px; /*Закругление ползунка*/
+			background-color: #ccc; /*Цвет ползунка*/
+		} 
+		&::-webkit-scrollbar { 
+			width: 6px;  /*Толщина скролла*/
+		}
 		.popup_close{
 			position: absolute;
 			top:20px;

@@ -220,6 +220,16 @@ body {
 		max-height: 90%;
 		border-radius: 10px;
 		overflow: auto; }
+		.popup_wrap .popup::-webkit-scrollbar-track {
+			background-color: transparent; }
+		.popup_wrap .popup::-webkit-scrollbar-thumb {
+			border-radius: 10px;
+			/*Закругление ползунка*/
+			background-color: #ccc;
+			/*Цвет ползунка*/ }
+		.popup_wrap .popup::-webkit-scrollbar {
+			width: 6px;
+			/*Толщина скролла*/ }
 		.popup_wrap .popup .popup_close {
 			position: absolute;
 			top: 20px;
