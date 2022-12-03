@@ -28,3 +28,16 @@ function showPopup(content_type){
 		})
 	}
 }
+
+forCopy_button.addEventListener("click",function(){
+	var str = forCopyText.innerText;
+	const el = document.createElement('textarea');
+    el.value = str;
+    el.setAttribute('readonly', '');
+    el.style.position = 'absolute';
+    el.style.left = '-9999px';
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand('copy');
+    document.body.removeChild(el);
+})

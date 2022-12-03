@@ -767,6 +767,16 @@ linear-gradient(0deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
 				}
 			}
 		}
+		.main_block_center_content{
+			width: 100%;
+			margin-top: 50px;
+			.main_block_center_content_element_line{
+				width: 100%;
+				justify-content: space-between;
+				align-items:center;
+				display: flex;
+			}
+		}
 	}
 	.drop_down_menu_buttons_element{
 		margin-top: 20px;
@@ -821,6 +831,9 @@ linear-gradient(0deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
 		&:hover{
 			background-color: #57D7FF;
 		}
+	}
+	&-purple{
+		background: linear-gradient(273.78deg, #930FFC 8.84%, #C824FF 53.8%, #D329FF 151.12%);
 	}
 	img{
 		height: 16px;
@@ -916,6 +929,29 @@ linear-gradient(0deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
 		}
 	}
 }
+.forCopy{
+	background: #18191C;
+	border-radius: 12px;
+	padding: 15px 22px;
+	display: flex;
+	justify-content: center;
+	align-items:center;
+	&_text{
+		font-size: 12px;
+	}
+	&_button{
+		margin-left: 15px;
+		img{
+			height: 15px;
+		}
+		cursor: pointer;
+	}
+}
 .mobile_blind{
-	display: none;
+	@media (max-width: 767px){display: none;}
+}
+.chart{
+	margin-top: 50px;
+	width: 100%;
+	max-width: 100%;
 }

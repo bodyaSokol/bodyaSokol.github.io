@@ -229,6 +229,26 @@
 					</div>
 				</div>
 			</div>
+			<div class="main_block_center_content">
+				<div class="main_block_center_content_element">
+					<div class="main_block_center_content_element_line">
+						<button class="btn btn-purple">
+							<img src="img/stable_wallet.png" alt="">
+							Stable Wallet
+						</button>
+						<div class="forCopy">
+							<div class="forCopy_text"  id="forCopyText">
+								QCstaslDHISjDf3wFohTorOwmdoaGD0tSAOofvbo08
+							</div>
+							<div class="forCopy_button" id="forCopy_button">
+								<img src="img/copy.png" alt="">
+							</div>
+						</div>
+					</div>
+					<div class="chart" id="chartContainer" ></div>
+				</div>
+
+			</div>
 		</div>
 		<div class="main_block_right">
 			<div class="main_block_right_element main_block_right_element_inline">
@@ -311,6 +331,40 @@
 			</div>
 		</div>
 	</div>
+	<script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+	<script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+	<script>
+		window.onload = function () {
+
+		var limit = 10000;    //increase number of dataPoints by increasing the limit
+		var y = 100;    
+		var data = [];
+		var dataSeries = { type: "line" };
+		var dataPoints = [];
+		for (var i = 0; i < limit; i += 1) {
+			y += Math.round(Math.random() * 10 - 5);
+			dataPoints.push({
+				x: i,
+				y: y
+			});
+		}
+		dataSeries.dataPoints = dataPoints;
+		data.push(dataSeries);
+
+		//Better to construct options first and then pass it as a parameter
+		var options = {
+			zoomEnabled: true,
+			animationEnabled: true,
+			title: {
+				text: "Try Zooming - Panning"
+			},
+			data: data  // random data
+		};
+
+		$("#chartContainer").CanvasJSChart(options);
+
+		}
+	</script>
 	<script>
 		let currencies = document.getElementsByClassName("decorated_select_hide_element");
 		if(currencies.length>0){
