@@ -46,8 +46,35 @@
 			<div class="drop_down_menu_user_name">Профиль</div>
 		</div>
 		<div class="drop_down_menu_message">
-			Вы не авторизованы :(
+			Активируйте кошелёк
 		</div>
+		<div class="statistical_figures">
+			<div class="statistical_figures_element">
+				<div class="statistical_figures_element_main">
+					<img src="img/statistics_contacts.png" alt="">
+					<span>Рефералы</span>
+				</div>
+				<span class="grey_text">0</span>
+			</div>
+			<div class="statistical_figures_element">
+				<div class="statistical_figures_element_main">
+					<img src="img/statistics_coins.png" alt="">
+					<span>Торговый баланс</span>
+				</div>
+				<span class="grey_text">0 QC</span>
+			</div>
+			<div class="statistical_figures_element">
+				<div class="statistical_figures_element_main">
+					<img src="img/statistics_card.png" alt="">
+					<span>Баланс стекинга</span>
+				</div>
+				<span class="grey_text">0 St QC</span>
+			</div>
+		</div>
+		<button class="btn btn-blue">
+			<img src="img/black_card_vector.png" alt="">
+			Пополнить
+		</button>
 		<div class="drop_down_menu_buttons">
 			<button class="drop_down_menu_buttons_element drop_down_menu_buttons_element_gradient" onclick="showPopup('popup_type_authorization')">
 				<div class="drop_down_menu_buttons_element_image">
@@ -99,6 +126,19 @@
 		</div>
 	</div>
 	<div class="main_block">
+		<div class="main_block_menu">
+			<div class="welcome_block_header">
+				<div class="welcome_block_header_item">
+					<img src="img/logo.png" alt="" class="logo">
+				</div>
+				<div class="welcome_block_header_item mobile_visibility" id="drop_down_menu_switcher">
+					<div class="user_avatar_with_button">
+						<img class="user_avatar_with_button_avatar" src="img/monkey_face.png" alt="">
+						<img class="user_avatar_with_button_arrow" src="img/user_avatar_arrow.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
 		<div class="main_block_left">
 			<div>
 				<img src="img/logo.png" alt="" class="logo">
@@ -171,10 +211,10 @@
 									<span id="decorated_select_active_value">0</span><img class="decorated_select_active_img" src="img/black_arrow.png" alt="">
 								</div>
 								<div class="decorated_select_hide" id="decorated_select_hide">
-									<div class="decorated_select_hide_element">4.914 RUB</div>
-									<div class="decorated_select_hide_element">0.08292 USD</div>
-									<div class="decorated_select_hide_element">0.0000054235 BTS</div>
-									<div class="decorated_select_hide_element">1.4195309252 DOGE</div>
+									<div class="decorated_select_hide_element"><span>4.914</span><span>RUB</span></div>
+									<div class="decorated_select_hide_element"><span>0.08292</span><span>USD</span></div>
+									<div class="decorated_select_hide_element"><span>0.0000054235</span><span>BTS</span></div>
+									<div class="decorated_select_hide_element"><span>1.4195309252</span><span>DOGE</span></div>
 								</div>
 							</div>
 						</div>
@@ -192,25 +232,20 @@
 		</div>
 		<div class="main_block_right">
 			<div class="main_block_right_element main_block_right_element_inline">
-				<div>
-					<div class="language_switcher" id="language_switcher">
-						<div class="language_switcher_visible">
-							<a class="language_item">
-								<img src="img/ru_flag.png" alt="">
-								<span>RU</span>
-							</a>
-							<img class="language_switcher_show_unvisible" src="img/down_language_arrow.png" alt="">
-						</div>
-						<div class="language_switcher_unvisible" id="language_switcher_unvisible">
-							<a href="#" class="language_item">
-								<img src="img/en_flag.png" alt="">
-								<span>EN</span>
-							</a>
-						</div>
+				<div class="language_switcher" id="language_switcher">
+					<div class="language_switcher_visible">
+						<a class="language_item">
+							<img src="img/ru_flag.png" alt="">
+							<span>RU</span>
+						</a>
+						<img class="language_switcher_show_unvisible" src="img/down_language_arrow.png" alt="">
 					</div>
-					<a href="https://t.me/q_coin_online">
-						<img src="img/telegram_icon.png" alt="" class="telegram_icon">
-					</a>
+					<div class="language_switcher_unvisible" id="language_switcher_unvisible">
+						<a href="#" class="language_item">
+							<img src="img/en_flag.png" alt="">
+							<span>EN</span>
+						</a>
+					</div>
 				</div>
 				<div class="drop_down_menu_user">
 					<img src="img/monkey_face.png" alt="" class="drop_down_menu_user_image">
@@ -251,7 +286,7 @@
 					</div>
 				</div>
 			</div>
-			<button class="btn btn-blue">
+			<button class="btn btn-blue mobile_blind">
 				<img src="img/black_card_vector.png" alt="">
 				Пополнить
 			</button>
@@ -279,10 +314,10 @@
 	<script>
 		let currencies = document.getElementsByClassName("decorated_select_hide_element");
 		if(currencies.length>0){
-			decorated_select_active_value.innerText = currencies[0].innerText;
+			decorated_select_active_value.innerText = currencies[0].children[1].innerText;
 			for (let currency of currencies) {
 				currency.addEventListener("click",function(){
-					decorated_select_active_value.innerText = currency.innerText;
+					decorated_select_active_value.innerText = currency.children[1].innerText;
 					decorated_select_hide.style.display = "none";
 				})
 			}
