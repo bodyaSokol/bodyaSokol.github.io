@@ -143,7 +143,7 @@
 			<div>
 				<img src="img/logo.png" alt="" class="logo">
 				<div class="drop_down_menu_buttons">
-					<button class="drop_down_menu_buttons_element drop_down_menu_buttons_element_gradient" onclick="">
+					<button class="drop_down_menu_buttons_element drop_down_menu_buttons_element_gradient" onclick="menu_turn_on_page('menu_main')" id="menu_main_button">
 						<div class="drop_down_menu_buttons_element_image">
 							<img src="img/button_ico_main.png" alt="">
 						</div>
@@ -151,7 +151,7 @@
 							Главная
 						</div>
 					</button>
-					<button class="drop_down_menu_buttons_element" onclick="">
+					<button class="drop_down_menu_buttons_element" onclick="menu_turn_on_page('menu_p2p')" id="menu_p2p_button">
 						<div class="drop_down_menu_buttons_element_image">
 							<img src="img/button_ico_p2p.png" alt="">
 						</div>
@@ -159,7 +159,7 @@
 							P2P
 						</div>
 					</button>
-					<button class="drop_down_menu_buttons_element" onclick="">
+					<button class="drop_down_menu_buttons_element" onclick="menu_turn_on_page('menu_market')" id="menu_market_button">
 						<div class="drop_down_menu_buttons_element_image">
 							<img src="img/button_ico_market.png" alt="">
 						</div>
@@ -196,9 +196,9 @@
 				<div class="main_block_center_top_element">
 					<div class="main_block_center_top_element_name">Привет, Игорь</div>
 					<div class="main_block_center_top_element_menu">
-						<button>Маркет</button>
-						<button class="main_block_center_top_element_menu_active">Курс</button>
-						<button>P2P</button>
+						<button id="menu_market_button_add" onclick="menu_turn_on_page('menu_market')">Маркет</button>
+						<button class="main_block_center_top_element_menu_active" id="menu_main_button_add" onclick="menu_turn_on_page('menu_main')">Курс</button>
+						<button id="menu_p2p_button_add" onclick="menu_turn_on_page('menu_p2p')">P2P</button>
 					</div>
 				</div>
 				<div class="main_block_center_top_element">
@@ -229,7 +229,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="main_block_center_content" id="content_chart">
+			<div class="main_block_center_content" id="menu_main">
 				<div class="main_block_center_content_element">
 					<div class="main_block_center_content_element_line">
 						<button class="btn btn-purple">
@@ -248,7 +248,7 @@
 					<div class="chart" id="chartContainer" ></div>
 				</div>
 			</div>
-			<div class="main_block_center_content">
+			<div class="main_block_center_content" id="menu_market">
 				<div class="black_box">
 					<div class="black_box_header">
 						<div class="black_box_header_menu">
@@ -415,6 +415,513 @@
 								</div>
 								<div class="black_box_elements_bills_element_item_bottom">
 									<img src="img/done_circle.png" alt="">Оплачен
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="main_block_center_content" id="menu_p2p">
+				<div class="create_an_offer">
+					<button class="btn btn-purple btn-middle"><img src="img/arrow_in_top_white.png" alt="">Создать предложение на покупку</button>
+					<img class="create_an_offer_replay" src="img/replay_white.png" alt="">
+					<button class="btn btn-pink btn-middle"><img src="img/arrow_in_bottom_white.png" alt="">Создать предложение на покупку</button>
+				</div>
+				<div class="black_box">
+					<div class="black_box_header">
+						<div class="black_box_header_menu">
+							<button class="black_box_header_menu_button" onclick="p2p_turn_on_page('p2p_buy')" id="p2p_buy_button">
+								Купить
+							</button>
+							<button class="black_box_header_menu_button" onclick="p2p_turn_on_page('p2p_sell')" id="p2p_sell_button">
+								Продать
+							</button>
+							<button class="black_box_header_menu_button black_box_header_menu_button_active" onclick="p2p_turn_on_page('p2p_my_trades')" id="p2p_my_trades_button">
+								Мои сделки <div class="black_box_header_menu_button_count">1</div>
+							</button>
+							<button class="black_box_header_menu_button" onclick="p2p_turn_on_page('p2p_my_offers')" id="p2p_my_offers_button">
+								Мои офферы
+							</button>
+							<button class="black_box_header_menu_button" onclick="p2p_turn_on_page('p2p_archive')" id="p2p_archive_button">
+								Архив
+							</button>
+						</div>
+					</div>
+					<div class="black_box_elements_bills" id="p2p_buy">
+						<p class="black_box_elements_bills_empty">
+							На данный момент активных сделок на покупку нет
+						</p>
+						<div class="black_box_elements_bills_element">
+							<div class="black_box_elements_bills_element_item_with_image">
+								<div class="black_box_elements_bills_element_item">
+									<img class="black_box_elements_bills_element_item_avatar" src="img/monkey_face.png" alt="">
+									<div class="online"></div>
+								</div>
+								<div class="black_box_elements_bills_element_item">
+									<div class="black_box_elements_bills_element_item_top">
+										Продавец
+									</div>
+									<div class="black_box_elements_bills_element_item_bottom">
+										Игорь
+									</div>
+								</div>
+							</div>
+							<div class="black_box_elements_bills_element_item">
+								<div class="black_box_elements_bills_element_item_top">
+									Способ оплаты
+								</div>
+								<div class="black_box_elements_bills_element_item_bottom">
+									Qiwi
+								</div>
+							</div>
+							<div class="black_box_elements_bills_element_item">
+								<div class="black_box_elements_bills_element_item_top">
+									Курс
+								</div>
+								<div class="black_box_elements_bills_element_item_bottom">
+									2:22
+								</div>
+							</div>
+							<div class="black_box_elements_bills_element_item">
+								<div class="black_box_elements_bills_element_item_top">
+									Лимиты сделки
+								</div>
+								<div class="black_box_elements_bills_element_item_bottom">
+									233-728.16 руб.
+								</div>
+							</div>
+							<button class="btn btn-yellow btn-small">Ваш оффер</button>
+						</div>
+						<div class="black_box_elements_bills_element">
+							<div class="black_box_elements_bills_element_item_with_image">
+								<div class="black_box_elements_bills_element_item">
+									<img class="black_box_elements_bills_element_item_avatar" src="img/monkey_face.png" alt="">
+									<div class="online"></div>
+								</div>
+								<div class="black_box_elements_bills_element_item">
+									<div class="black_box_elements_bills_element_item_top">
+										Продавец
+									</div>
+									<div class="black_box_elements_bills_element_item_bottom">
+										Саня
+									</div>
+								</div>
+							</div>
+							<div class="black_box_elements_bills_element_item">
+								<div class="black_box_elements_bills_element_item_top">
+									Способ оплаты
+								</div>
+								<div class="black_box_elements_bills_element_item_bottom">
+									Тиньков
+								</div>
+							</div>
+							<div class="black_box_elements_bills_element_item">
+								<div class="black_box_elements_bills_element_item_top">
+									Курс
+								</div>
+								<div class="black_box_elements_bills_element_item_bottom">
+									2:22
+								</div>
+							</div>
+							<div class="black_box_elements_bills_element_item">
+								<div class="black_box_elements_bills_element_item_top">
+									Лимиты сделки
+								</div>
+								<div class="black_box_elements_bills_element_item_bottom">
+									233-728.16 руб.
+								</div>
+							</div>
+							<button class="btn btn-yellow btn-small">Ваш оффер</button>
+						</div>
+					</div>
+					<div class="black_box_elements_bills" id="p2p_sell">
+						<p class="black_box_elements_bills_empty">
+							На данный момент активных сделок на продажу нет
+						</p>
+						<div class="black_box_elements_bills_element">
+							<div class="black_box_elements_bills_element_item_with_image">
+								<div class="black_box_elements_bills_element_item">
+									<img class="black_box_elements_bills_element_item_avatar" src="img/monkey_face.png" alt="">
+									<div class="online"></div>
+								</div>
+								<div class="black_box_elements_bills_element_item">
+									<div class="black_box_elements_bills_element_item_top">
+										Продавец
+									</div>
+									<div class="black_box_elements_bills_element_item_bottom">
+										Игорь
+									</div>
+								</div>
+							</div>
+							<div class="black_box_elements_bills_element_item">
+								<div class="black_box_elements_bills_element_item_top">
+									Способ оплаты
+								</div>
+								<div class="black_box_elements_bills_element_item_bottom">
+									Qiwi
+								</div>
+							</div>
+							<div class="black_box_elements_bills_element_item">
+								<div class="black_box_elements_bills_element_item_top">
+									Курс
+								</div>
+								<div class="black_box_elements_bills_element_item_bottom">
+									2:22
+								</div>
+							</div>
+							<div class="black_box_elements_bills_element_item">
+								<div class="black_box_elements_bills_element_item_top">
+									Лимиты сделки
+								</div>
+								<div class="black_box_elements_bills_element_item_bottom">
+									233-728.16 руб.
+								</div>
+							</div>
+							<button class="btn btn-yellow btn-small">Ваш оффер</button>
+						</div>
+						<div class="black_box_elements_bills_element">
+							<div class="black_box_elements_bills_element_item_with_image">
+								<div class="black_box_elements_bills_element_item">
+									<img class="black_box_elements_bills_element_item_avatar" src="img/monkey_face.png" alt="">
+									<div class="online"></div>
+								</div>
+								<div class="black_box_elements_bills_element_item">
+									<div class="black_box_elements_bills_element_item_top">
+										Продавец
+									</div>
+									<div class="black_box_elements_bills_element_item_bottom">
+										Саня
+									</div>
+								</div>
+							</div>
+							<div class="black_box_elements_bills_element_item">
+								<div class="black_box_elements_bills_element_item_top">
+									Способ оплаты
+								</div>
+								<div class="black_box_elements_bills_element_item_bottom">
+									Тиньков
+								</div>
+							</div>
+							<div class="black_box_elements_bills_element_item">
+								<div class="black_box_elements_bills_element_item_top">
+									Курс
+								</div>
+								<div class="black_box_elements_bills_element_item_bottom">
+									2:22
+								</div>
+							</div>
+							<div class="black_box_elements_bills_element_item">
+								<div class="black_box_elements_bills_element_item_top">
+									Лимиты сделки
+								</div>
+								<div class="black_box_elements_bills_element_item_bottom">
+									233-728.16 руб.
+								</div>
+							</div>
+							<button class="btn btn-yellow btn-small">Ваш оффер</button>
+						</div>
+					</div>
+					<div class="black_box_elements_bills" id="p2p_my_trades">
+						<p class="black_box_elements_bills_empty">
+							На данный момент активных сделок на продажу нет
+						</p>
+						<div class="black_box_elements_bills_element">
+							<div class="black_box_elements_bills_element_item">
+								<div class="black_box_elements_bills_element_item_top">
+									Покупатель
+								</div>
+								<div class="black_box_elements_bills_element_item_bottom">
+									Вы
+								</div>
+							</div>
+							<div class="black_box_elements_bills_element_item">
+								<div class="black_box_elements_bills_element_item_top">
+									Статус
+								</div>
+								<div class="black_box_elements_bills_element_item_bottom">
+									Ожидает оплаты
+								</div>
+							</div>
+							<div class="black_box_elements_bills_element_item">
+								<div class="black_box_elements_bills_element_item_top">
+									Объем сделки
+								</div>
+								<div class="black_box_elements_bills_element_item_bottom">
+									100 QC на 400 руб.
+								</div>
+							</div>
+							<div class="black_box_elements_bills_element_item">
+								<div class="black_box_elements_bills_element_item_top">
+									Таймер
+								</div>
+								<div class="black_box_elements_bills_element_item_bottom">
+									<span class="yellow_text">28:42</span>
+								</div>
+							</div>
+							<div class="black_box_elements_bills_element_item">
+								<div class="black_box_elements_bills_element_item_top">
+									Статус
+								</div>
+								<div class="black_box_elements_bills_element_item_bottom">
+									<img src="img/done_circle.png" alt="">Оплачен
+								</div>
+							</div>
+							<div class="black_box_elements_bills_element_item black_box_elements_bills_element_item_w100">
+								<div class="df">
+									<button class="btn btn-green btn-small btn-white_text btn-mr7">
+										<img src="img/white_card.png" alt="">
+										Оплатить
+									</button>
+									<button class="btn btn-blue btn-small">
+										<img src="img/black_speak_cloud.png" alt="">
+										Чат Сделки
+									</button>
+								</div>
+								<button class="btn btn-blackgrey btn-small btn-white_text">
+									Арбитраж
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="black_box_elements_bills" id="p2p_my_offers">
+						<p class="black_box_elements_bills_empty">
+							На данный момент активных сделок на продажу нет
+						</p>
+						<div class="black_box_elements_bills_element">
+							<div class="black_box_elements_bills_element_item">
+								<div class="black_box_elements_bills_element_item_top">
+									Тип операции
+								</div>
+								<div class="black_box_elements_bills_element_item_bottom">
+									<img src="img/arrow_in_top.png" alt="">Покупка
+								</div>
+							</div>
+							<div class="black_box_elements_bills_element_item">
+								<div class="black_box_elements_bills_element_item_top">
+									Статус
+								</div>
+								<div class="black_box_elements_bills_element_item_bottom">
+									<img src="img/done_circle.png" alt="">Активен
+								</div>
+							</div>
+							<div class="black_box_elements_bills_element_item">
+								<div class="black_box_elements_bills_element_item_top">
+									Оплата
+								</div>
+								<div class="black_box_elements_bills_element_item_bottom">
+									Сбербанк
+								</div>
+							</div>
+							<div class="black_box_elements_bills_element_item">
+								<div class="black_box_elements_bills_element_item_top">
+									Курс
+								</div>
+								<div class="black_box_elements_bills_element_item_bottom">
+									6
+								</div>
+							</div>
+							<div class="black_box_elements_bills_element_item">
+								<div class="black_box_elements_bills_element_item_top">
+									Колл-во монет
+								</div>
+								<div class="black_box_elements_bills_element_item_bottom">
+									16
+								</div>
+							</div>
+							<div class="black_box_elements_bills_element_item">
+								<div class="black_box_elements_bills_element_item_top">
+									Лимит сделки
+								</div>
+								<div class="black_box_elements_bills_element_item_bottom">
+									6-96 руб.
+								</div>
+							</div>
+							<div class="black_box_elements_bills_element_item black_box_elements_bills_element_item_w100">
+								<button class="btn btn-blue btn-small btn-w100">
+									<img src="img/reload.png" alt="">
+									Изменить / приостановить / закрыть оффер
+								</button>
+							</div>
+						</div>
+						<div class="black_box_elements_bills_element">
+							<div class="black_box_elements_bills_element_item">
+								<div class="black_box_elements_bills_element_item_top">
+									Тип операции
+								</div>
+								<div class="black_box_elements_bills_element_item_bottom">
+									<img src="img/arrow_in_bottom.png" alt="">Продажа
+								</div>
+							</div>
+							<div class="black_box_elements_bills_element_item">
+								<div class="black_box_elements_bills_element_item_top">
+									Статус
+								</div>
+								<div class="black_box_elements_bills_element_item_bottom">
+									<img src="img/disactive.png" alt="">Не активен
+								</div>
+							</div>
+							<div class="black_box_elements_bills_element_item">
+								<div class="black_box_elements_bills_element_item_top">
+									Оплата
+								</div>
+								<div class="black_box_elements_bills_element_item_bottom">
+									Сбербанк
+								</div>
+							</div>
+							<div class="black_box_elements_bills_element_item">
+								<div class="black_box_elements_bills_element_item_top">
+									Курс
+								</div>
+								<div class="black_box_elements_bills_element_item_bottom">
+									6
+								</div>
+							</div>
+							<div class="black_box_elements_bills_element_item">
+								<div class="black_box_elements_bills_element_item_top">
+									Колл-во монет
+								</div>
+								<div class="black_box_elements_bills_element_item_bottom">
+									16
+								</div>
+							</div>
+							<div class="black_box_elements_bills_element_item">
+								<div class="black_box_elements_bills_element_item_top">
+									Лимит сделки
+								</div>
+								<div class="black_box_elements_bills_element_item_bottom">
+									6-96 руб.
+								</div>
+							</div>
+							<div class="black_box_elements_bills_element_item black_box_elements_bills_element_item_w100">
+								<button class="btn btn-blue btn-small btn-w100">
+									<img src="img/reload.png" alt="">
+									Изменить / приостановить / закрыть оффер
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="black_box_elements_bills" id="p2p_archive">
+						<div class="black_box_elements_bills_statistics">
+							<div class="black_box_elements_bills_statistics_image green_background">
+								<img src="img/coins_ico.png" alt="">
+							</div>
+							<div class="black_box_elements_bills_statistics_block">
+								<div class="black_box_elements_bills_statistics_block_item">
+									<div class="grey_text">
+										<img src="img/arrow_in_top.png" alt="">
+										Куплено
+									</div>
+									<div>
+										<span class="green_text">100</span>
+										QC
+									</div>
+								</div>
+								<div class="black_box_elements_bills_statistics_block_item">
+									<div class="grey_text">
+										<img src="img/arrow_in_bottom.png" alt="">
+										Продано
+									</div>
+									<div>
+										<span class="red_text">100</span>
+										QC
+									</div>
+								</div>
+								<div class="black_box_elements_bills_statistics_block_item">
+									<div class="grey_text">
+										<img src="img/grey_coins_ico.png" alt="">
+										Баланс
+									</div>
+									<div>
+										<span class="green_text">+100</span>
+										QC
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="black_box_elements_bills_statistics">
+							<div class="black_box_elements_bills_statistics_image purple_background">
+								<img src="img/money_bag_ico.png" alt="">
+							</div>
+							<div class="black_box_elements_bills_statistics_block">
+								<div class="black_box_elements_bills_statistics_block_item">
+									<div class="grey_text">
+										<img src="img/arrow_in_top.png" alt="">
+										Доход
+									</div>
+									<div>
+										<span class="green_text">0</span>
+										руб
+									</div>
+								</div>
+								<div class="black_box_elements_bills_statistics_block_item">
+									<div class="grey_text">
+										<img src="img/arrow_in_bottom.png" alt="">
+										Расход
+									</div>
+									<div>
+										<span class="red_text">0</span>
+										руб
+									</div>
+								</div>
+								<div class="black_box_elements_bills_statistics_block_item">
+									<div class="grey_text">
+										<img src="img/grey_coins_ico.png" alt="">
+										Баланс
+									</div>
+									<div>
+										<span class="red_text">-100</span>
+										руб
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="black_box_elements_bills_element">
+							<div class="black_box_elements_bills_element_item">
+								<div class="black_box_elements_bills_element_item_top">
+									Тип операции
+								</div>
+								<div class="black_box_elements_bills_element_item_bottom">
+									<span class="green_text">Покупка</span>
+								</div>
+							</div>
+							<div class="black_box_elements_bills_element_item">
+								<div class="black_box_elements_bills_element_item_top">
+									Статус
+								</div>
+								<div class="black_box_elements_bills_element_item_bottom">
+									Исполнена
+								</div>
+							</div>
+							<div class="black_box_elements_bills_element_item">
+								<div class="black_box_elements_bills_element_item_top">
+									Колл-во монет
+								</div>
+								<div class="black_box_elements_bills_element_item_bottom">
+									<span class="green_text">+100</span>
+								</div>
+							</div>
+							<div class="black_box_elements_bills_element_item">
+								<div class="black_box_elements_bills_element_item_top">
+									Курс
+								</div>
+								<div class="black_box_elements_bills_element_item_bottom">
+									4
+								</div>
+							</div>
+							<div class="black_box_elements_bills_element_item">
+								<div class="black_box_elements_bills_element_item_top">
+									Сумма
+								</div>
+								<div class="black_box_elements_bills_element_item_bottom">
+									0
+								</div>
+							</div>
+							<div class="black_box_elements_bills_element_item">
+								<div class="black_box_elements_bills_element_item_top">
+									Дата
+								</div>
+								<div class="black_box_elements_bills_element_item_bottom">
+									30.10.2022, 8:45;15
 								</div>
 							</div>
 						</div>

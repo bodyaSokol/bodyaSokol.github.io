@@ -41,3 +41,25 @@ forCopy_button.addEventListener("click",function(){
     document.execCommand('copy');
     document.body.removeChild(el);
 })
+
+function p2p_turn_on_page(page){
+	let pages = ["p2p_my_trades","p2p_sell","p2p_my_offers","p2p_archive","p2p_buy"];
+	pages.forEach(function(page){
+		document.getElementById(`${page}`).style.display="none";
+		document.getElementById(`${page}_button`).classList.remove("black_box_header_menu_button_active");
+	})
+
+	document.getElementById(`${page}`).style.display="block";
+	document.getElementById(`${page}_button`).classList.add("black_box_header_menu_button_active");
+}
+function menu_turn_on_page(page){
+	let pages = ["menu_main","menu_market","menu_p2p"];
+	pages.forEach(function(page){
+		document.getElementById(`${page}`).style.display="none";
+		document.getElementById(`${page}_button`).classList.remove("drop_down_menu_buttons_element_gradient");
+		document.getElementById(`${page}_button_add`).classList.remove("main_block_center_top_element_menu_active");
+	})
+	document.getElementById(`${page}`).style.display="block";
+	document.getElementById(`${page}_button`).classList.add("drop_down_menu_buttons_element_gradient");
+	document.getElementById(`${page}_button_add`).classList.add("main_block_center_top_element_menu_active");
+}
