@@ -1333,5 +1333,5 @@ body {
 	background: #0FA566;
 	border: 2px solid #18191C; }
 
-#menu_p2p, #menu_market, #p2p_sell, #p2p_my_offers, #p2p_archive, #p2p_buy {
+#menu_p2p, #menu_market, #p2p_sell, #p2p_my_offers, #p2p_archive, #p2p_buy, #market_archive, #market_my_accounts {
 	display: none; }

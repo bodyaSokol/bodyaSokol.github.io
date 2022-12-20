@@ -252,13 +252,13 @@
 				<div class="black_box">
 					<div class="black_box_header">
 						<div class="black_box_header_menu">
-							<button class="black_box_header_menu_button">
+							<button class="black_box_header_menu_button" id="market_my_accounts_button" onclick="market_turn_on_page('market_my_accounts')">
 								Мои счета <div class="black_box_header_menu_button_count">1</div>
 							</button>
-							<button class="black_box_header_menu_button black_box_header_menu_button_active">
+							<button class="black_box_header_menu_button black_box_header_menu_button_active" id="market_archive_button" onclick="market_turn_on_page('market_archive')">
 								Архив счетов
 							</button>
-							<button class="black_box_header_menu_button">
+							<button class="black_box_header_menu_button" id="market_my_services_button" onclick="market_turn_on_page('market_my_services')">
 								Мои услуги
 							</button>
 						</div>
@@ -267,7 +267,7 @@
 							Выставить счет H2H
 						</button>
 					</div>
-					<div class="black_box_elements_bills">
+					<div class="black_box_elements_bills" id="market_archive">
 						<div class="black_box_elements_bills_element">
 							<div class="black_box_elements_bills_element_item">
 								<div class="black_box_elements_bills_element_item_top">
@@ -415,6 +415,160 @@
 								</div>
 								<div class="black_box_elements_bills_element_item_bottom">
 									<img src="img/done_circle.png" alt="">Оплачен
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="black_box_elements_bills" id="market_my_accounts">
+						<div class="black_box_elements_bills_element">
+							<div class="black_box_elements_bills_element_item">
+								<div class="black_box_elements_bills_element_item_top">
+									Продавец
+								</div>
+								<div class="black_box_elements_bills_element_item_bottom">
+									<img src="img/arrow_in_top.png" alt="">Вы
+								</div>
+							</div>
+							<div class="black_box_elements_bills_element_item">
+								<div class="black_box_elements_bills_element_item_top">
+									RUB
+								</div>
+								<div class="black_box_elements_bills_element_item_bottom">
+									43
+								</div>
+							</div>
+							<div class="black_box_elements_bills_element_item">
+								<div class="black_box_elements_bills_element_item_top">
+									QC
+								</div>
+								<div class="black_box_elements_bills_element_item_bottom">
+									6.559
+								</div>
+							</div>
+							<div class="black_box_elements_bills_element_item">
+								<div class="black_box_elements_bills_element_item_top">
+									Дата
+								</div>
+								<div class="black_box_elements_bills_element_item_bottom">
+									09.11.22 17:54:09
+								</div>
+							</div>
+							<div class="black_box_elements_bills_element_item">
+								<div class="black_box_elements_bills_element_item_top">
+									Бонус 10%
+								</div>
+								<div class="black_box_elements_bills_element_item_bottom">
+									<span class="yellow_text">4</span> руб, <span class="yellow_text">0.66</span> QC
+								</div>
+							</div>
+							<div class="black_box_elements_bills_element_item">
+								<div class="black_box_elements_bills_element_item_top">
+									Статус
+								</div>
+								<div class="black_box_elements_bills_element_item_bottom">
+									<img src="img/done_circle.png" alt="">Мои счета
+								</div>
+							</div>
+						</div>
+						<div class="black_box_elements_bills_element">
+							<div class="black_box_elements_bills_element_item">
+								<div class="black_box_elements_bills_element_item_top">
+									Продавец
+								</div>
+								<div class="black_box_elements_bills_element_item_bottom">
+									<img src="img/arrow_in_top.png" alt="">Вы
+								</div>
+							</div>
+							<div class="black_box_elements_bills_element_item">
+								<div class="black_box_elements_bills_element_item_top">
+									RUB
+								</div>
+								<div class="black_box_elements_bills_element_item_bottom">
+									43
+								</div>
+							</div>
+							<div class="black_box_elements_bills_element_item">
+								<div class="black_box_elements_bills_element_item_top">
+									QC
+								</div>
+								<div class="black_box_elements_bills_element_item_bottom">
+									6.559
+								</div>
+							</div>
+							<div class="black_box_elements_bills_element_item">
+								<div class="black_box_elements_bills_element_item_top">
+									Дата
+								</div>
+								<div class="black_box_elements_bills_element_item_bottom">
+									09.11.22 17:54:09
+								</div>
+							</div>
+							<div class="black_box_elements_bills_element_item">
+								<div class="black_box_elements_bills_element_item_top">
+									Бонус 10%
+								</div>
+								<div class="black_box_elements_bills_element_item_bottom">
+									<span class="yellow_text">4</span> руб, <span class="yellow_text">0.66</span> QC
+								</div>
+							</div>
+							<div class="black_box_elements_bills_element_item">
+								<div class="black_box_elements_bills_element_item_top">
+									Статус
+								</div>
+								<div class="black_box_elements_bills_element_item_bottom">
+									<img src="img/done_circle.png" alt="">Мои счета
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="black_box_elements_bills" id="market_my_services">
+						<div class="black_box_elements_bills_element">
+							<div class="black_box_elements_bills_element_item">
+								<div class="black_box_elements_bills_element_item_top">
+									Продавец
+								</div>
+								<div class="black_box_elements_bills_element_item_bottom">
+									<img src="img/arrow_in_top.png" alt="">Вы
+								</div>
+							</div>
+							<div class="black_box_elements_bills_element_item">
+								<div class="black_box_elements_bills_element_item_top">
+									RUB
+								</div>
+								<div class="black_box_elements_bills_element_item_bottom">
+									43
+								</div>
+							</div>
+							<div class="black_box_elements_bills_element_item">
+								<div class="black_box_elements_bills_element_item_top">
+									QC
+								</div>
+								<div class="black_box_elements_bills_element_item_bottom">
+									6.559
+								</div>
+							</div>
+							<div class="black_box_elements_bills_element_item">
+								<div class="black_box_elements_bills_element_item_top">
+									Дата
+								</div>
+								<div class="black_box_elements_bills_element_item_bottom">
+									09.11.22 17:54:09
+								</div>
+							</div>
+							<div class="black_box_elements_bills_element_item">
+								<div class="black_box_elements_bills_element_item_top">
+									Бонус 10%
+								</div>
+								<div class="black_box_elements_bills_element_item_bottom">
+									<span class="yellow_text">4</span> руб, <span class="yellow_text">0.66</span> QC
+								</div>
+							</div>
+							<div class="black_box_elements_bills_element_item">
+								<div class="black_box_elements_bills_element_item_top">
+									Статус
+								</div>
+								<div class="black_box_elements_bills_element_item_bottom">
+									<img src="img/done_circle.png" alt="">Мои услуги
 								</div>
 							</div>
 						</div>

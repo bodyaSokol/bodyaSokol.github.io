@@ -63,3 +63,13 @@ function menu_turn_on_page(page){
 	document.getElementById(`${page}_button`).classList.add("drop_down_menu_buttons_element_gradient");
 	document.getElementById(`${page}_button_add`).classList.add("main_block_center_top_element_menu_active");
 }
+function market_turn_on_page(page){
+	let pages = ["market_archive","market_my_accounts","market_my_services"];
+	pages.forEach(function(page){
+		document.getElementById(`${page}`).style.display="none";
+		document.getElementById(`${page}_button`).classList.remove("black_box_header_menu_button_active");
+	})
+
+	document.getElementById(`${page}`).style.display="block";
+	document.getElementById(`${page}_button`).classList.add("black_box_header_menu_button_active");
+}
