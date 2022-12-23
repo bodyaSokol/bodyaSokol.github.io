@@ -28,6 +28,7 @@ function showPopup(content_type){
 		})
 	}
 }
+showPopup("popup_type_chat");
 
 forCopy_button.addEventListener("click",function(){
 	var str = forCopyText.innerText;

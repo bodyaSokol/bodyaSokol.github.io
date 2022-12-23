@@ -277,6 +277,9 @@ body{
 				font-size: 32px;
 				line-height: 18px;
 				text-align: center;
+				&-left{
+					text-align: left;
+				}
 			}
 			.popup_content_image{
 				width: 125px;
@@ -333,6 +336,9 @@ body{
 				}
 			}
 		}
+		// .popup_type_chat{
+		// 	width: 491px;
+		// }
 	}
 }
 #popup_wrap,.popup_type_registration,.popup_type_authorization{
@@ -797,20 +803,6 @@ linear-gradient(0deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
 					}
 				}
 			}
-			.create_an_offer{
-				width: 100%;
-				display: flex;
-				align-items: center;
-				justify-content: space-between;
-				flex-wrap: wrap;
-				margin: 30px 0px 20px;
-
-				.create_an_offer_replay{
-					height: 24px;
-					@media screen and (max-width: 1400px) and (min-width: 768px){display: none;}
-					@media screen and (max-width: 700px){display: none;}
-				}
-			}
 		}
 	}
 	.drop_down_menu_buttons_element{
@@ -1184,6 +1176,117 @@ linear-gradient(0deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
 
 	background: #0FA566;
 	border: 2px solid #18191C;
+}
+.blocks_between_replay{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin: 30px 0px 20px;
+	font-size: 14px;
+	.blocks_between_replay_icon{
+		height: 24px;
+		@media screen and (max-width: 1400px) and (min-width: 768px){display: none;}
+		@media screen and (max-width: 700px){display: none;}
+	}
+	.blocks_between_replay_item{
+		
+	}
+}
+.chat{
+	width: 420px;
+	@media screen and (max-width: 700px){width: auto;}
+	overflow: hidden;
+	.chat_history{
+		display:block;
+		padding: 37px 20px;
+		width: 100%;
+		height: 300px;
+		overflow-x: hidden;
+		overflow-y: scroll;
+		background-color: #14151A;
+		border-radius: 10px;
+		box-sizing: border-box;
+		&::-webkit-scrollbar{
+		  width: 0;
+		}
+		&::-webkit-scrollbar{
+		  width: 0;
+		}
+		.chat_history_messages{
+			width: 100%;
+			.chat_history_messages_message{
+				display: flex;
+				margin-top: 14px;
+				.chat_history_messages_message_body{
+					border-radius: 5px;
+					padding: 7px 15px;
+					display: flex;
+					.chat_history_messages_message_body_user{
+						img{
+							width: 25px;
+							height: 25px;
+							border-radius: 50%;
+						}
+						margin-right: 15px;
+					}
+					.chat_history_messages_message_body_text{
+						text-align: left;
+						padding-top: 3px;
+						span{
+							color:black;
+							text-align: left;
+						}
+					}
+				}
+				&_left{
+					justify-content: flex-start;
+					.chat_history_messages_message_body{
+						background-color: #5CC5F7;
+					}
+				}
+				&_right{
+					justify-content: flex-end;
+					.chat_history_messages_message_body{
+						background-color: #DB64FF;
+					}
+				}
+			}
+		}
+	}
+	.chat_form{
+		overflow: hidden;
+		width: 100%;
+		padding: 26px 36px 26px 28px;
+		background: #1A1B1F;
+		border-radius: 0px 0px 10px 10px;
+		display: flex;
+		align-items: center;
+		.chat_form_input{
+			border:0px;
+			background:transparent;
+			outline:none;
+			resize:none;
+			width: 80%;
+			height: 20px;
+			&::-webkit-scrollbar{
+			  width: 0;
+			}
+			&::-webkit-scrollbar{
+			  width: 0;
+			}
+		}
+		.chat_form_send{
+			border:0px;
+			background:transparent;
+			cursor:pointer;
+			img{
+				width: 20px;
+				height: 20px;
+			}
+		}
+	}
 }
 #menu_p2p,#menu_market,#p2p_sell,#p2p_my_offers,#p2p_archive,#p2p_buy,#market_archive,#market_my_accounts{
 	display: none;

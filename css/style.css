@@ -304,6 +304,8 @@ body {
 				font-size: 32px;
 				line-height: 18px;
 				text-align: center; }
+				.popup_wrap .popup .popup_content .popup_content_title-left {
+					text-align: left; }
 			.popup_wrap .popup .popup_content .popup_content_image {
 				width: 125px;
 				height: 125px;
@@ -903,28 +905,6 @@ body {
 						        align-items: flex-start; }
 						.main_block .main_block_center .main_block_center_content .main_block_center_content_element_line .forCopy {
 							margin-top: 20px; } }
-			.main_block .main_block_center .main_block_center_content .create_an_offer {
-				width: 100%;
-				display: -webkit-box;
-				display: -ms-flexbox;
-				display: flex;
-				-webkit-box-align: center;
-				    -ms-flex-align: center;
-				        align-items: center;
-				-webkit-box-pack: justify;
-				    -ms-flex-pack: justify;
-				        justify-content: space-between;
-				-ms-flex-wrap: wrap;
-				    flex-wrap: wrap;
-				margin: 30px 0px 20px; }
-				.main_block .main_block_center .main_block_center_content .create_an_offer .create_an_offer_replay {
-					height: 24px; }
-					@media screen and (max-width: 1400px) and (min-width: 768px) {
-						.main_block .main_block_center .main_block_center_content .create_an_offer .create_an_offer_replay {
-							display: none; } }
-					@media screen and (max-width: 700px) {
-						.main_block .main_block_center .main_block_center_content .create_an_offer .create_an_offer_replay {
-							display: none; } }
 	.main_block .drop_down_menu_buttons_element {
 		margin-top: 20px; }
 
@@ -1332,6 +1312,119 @@ body {
 	border-radius: 50%;
 	background: #0FA566;
 	border: 2px solid #18191C; }
+
+.blocks_between_replay {
+	width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	margin: 30px 0px 20px;
+	font-size: 14px; }
+	.blocks_between_replay .blocks_between_replay_icon {
+		height: 24px; }
+		@media screen and (max-width: 1400px) and (min-width: 768px) {
+			.blocks_between_replay .blocks_between_replay_icon {
+				display: none; } }
+		@media screen and (max-width: 700px) {
+			.blocks_between_replay .blocks_between_replay_icon {
+				display: none; } }
+
+.chat {
+	width: 420px;
+	overflow: hidden; }
+	@media screen and (max-width: 700px) {
+		.chat {
+			width: auto; } }
+	.chat .chat_history {
+		display: block;
+		padding: 37px 20px;
+		width: 100%;
+		height: 300px;
+		overflow-x: hidden;
+		overflow-y: scroll;
+		background-color: #14151A;
+		border-radius: 10px;
+		-webkit-box-sizing: border-box;
+		        box-sizing: border-box; }
+		.chat .chat_history::-webkit-scrollbar {
+			width: 0; }
+		.chat .chat_history::-webkit-scrollbar {
+			width: 0; }
+		.chat .chat_history .chat_history_messages {
+			width: 100%; }
+			.chat .chat_history .chat_history_messages .chat_history_messages_message {
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				margin-top: 14px; }
+				.chat .chat_history .chat_history_messages .chat_history_messages_message .chat_history_messages_message_body {
+					border-radius: 5px;
+					padding: 7px 15px;
+					display: -webkit-box;
+					display: -ms-flexbox;
+					display: flex; }
+					.chat .chat_history .chat_history_messages .chat_history_messages_message .chat_history_messages_message_body .chat_history_messages_message_body_user {
+						margin-right: 15px; }
+						.chat .chat_history .chat_history_messages .chat_history_messages_message .chat_history_messages_message_body .chat_history_messages_message_body_user img {
+							width: 25px;
+							height: 25px;
+							border-radius: 50%; }
+					.chat .chat_history .chat_history_messages .chat_history_messages_message .chat_history_messages_message_body .chat_history_messages_message_body_text {
+						text-align: left;
+						padding-top: 3px; }
+						.chat .chat_history .chat_history_messages .chat_history_messages_message .chat_history_messages_message_body .chat_history_messages_message_body_text span {
+							color: black;
+							text-align: left; }
+				.chat .chat_history .chat_history_messages .chat_history_messages_message_left {
+					-webkit-box-pack: start;
+					    -ms-flex-pack: start;
+					        justify-content: flex-start; }
+					.chat .chat_history .chat_history_messages .chat_history_messages_message_left .chat_history_messages_message_body {
+						background-color: #5CC5F7; }
+				.chat .chat_history .chat_history_messages .chat_history_messages_message_right {
+					-webkit-box-pack: end;
+					    -ms-flex-pack: end;
+					        justify-content: flex-end; }
+					.chat .chat_history .chat_history_messages .chat_history_messages_message_right .chat_history_messages_message_body {
+						background-color: #DB64FF; }
+	.chat .chat_form {
+		overflow: hidden;
+		width: 100%;
+		padding: 26px 36px 26px 28px;
+		background: #1A1B1F;
+		border-radius: 0px 0px 10px 10px;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center; }
+		.chat .chat_form .chat_form_input {
+			border: 0px;
+			background: transparent;
+			outline: none;
+			resize: none;
+			width: 80%;
+			height: 20px; }
+			.chat .chat_form .chat_form_input::-webkit-scrollbar {
+				width: 0; }
+			.chat .chat_form .chat_form_input::-webkit-scrollbar {
+				width: 0; }
+		.chat .chat_form .chat_form_send {
+			border: 0px;
+			background: transparent;
+			cursor: pointer; }
+			.chat .chat_form .chat_form_send img {
+				width: 20px;
+				height: 20px; }
 
 #menu_p2p, #menu_market, #p2p_sell, #p2p_my_offers, #p2p_archive, #p2p_buy, #market_archive, #market_my_accounts {
 	display: none; }

@@ -16,27 +16,107 @@
 			<div class="popup_close">
 				<img src="img/close_popup.png" alt="" id="popup_close">
 			</div>
-			<div class="popup_content popup_type_registration">
-				<p class="popup_content_title">Регистрация</p>
-				<img src="img/ellipse_with_user.png" class="popup_content_image" alt="">
-				<form action="" class="popup_content_form">
-					<label for="reg_input" class="popup_content_form_label">Реферальный код</label>
-					<input type="text" name="ref_code" id="reg_input" class="popup_content_form_input" placeholder="Впишите код сюда">
-					<p class="popup_content_form_text">Если у вас нет кода, зайдите в наш <a href="https://t.me/q_coin_online">ТГ канал</a></p>
-					<button type="submit" class="popup_content_form_submit">Зарегистрироваться</button>
-				</form>
-			</div>
-			<div class="popup_content popup_type_authorization">
-				<p class="popup_content_title">Авторизация</p>
-				<img src="img/ellipse_with_user.png" class="popup_content_image" alt="">
-				<form action="" class="popup_content_form">
-					<label for="email_input" class="popup_content_form_label">Email</label>
-					<input type="text" name="email" id="email_input" class="popup_content_form_input" placeholder="Впишите почту сюда">
-					<label for="password_input" class="popup_content_form_label">Пароль</label>
-					<input type="password" name="password" id="password_input" class="popup_content_form_input" placeholder="Впишите пароль сюда">
-					<div class="popup_content_form_text popup_content_form_text_red">Неверный E-mail или пароль. (можно не писать текст)</div>
-					<button type="submit" class="popup_content_form_submit">Войти</button>
-				</form>
+			<div class="popup_content popup_type_chat">
+				<p class="popup_content_title popup_content_title-left">Чат сделки</p>
+				<div class="blocks_between_replay">
+					<div class="blocks_between_replay_item">
+						<span class="grey_text">Продавец:</span> Игорь
+					</div>
+					<div class="blocks_between_replay_item">
+						<span class="grey_text">Покупатель:</span> Валерий
+					</div>
+				</div>
+				<div class="chat">
+					<div class="chat_history">
+						<div class="chat_history_messages">
+							<div class="chat_history_messages_message chat_history_messages_message_left">
+								<div class="chat_history_messages_message_body">
+									<div class="chat_history_messages_message_body_user">
+										<img src="img/monkey_face.png" alt="">
+									</div>
+									<div class="chat_history_messages_message_body_text">
+										<span>Валера, где дизайн?</span>
+									</div>
+								</div>
+							</div>
+							<div class="chat_history_messages_message chat_history_messages_message_right">
+								<div class="chat_history_messages_message_body">
+									<div class="chat_history_messages_message_body_user">
+										<img src="img/profile_photo.png" alt="">
+									</div>
+									<div class="chat_history_messages_message_body_text">
+										<span>Норм чатик замутил?</span>
+									</div>
+								</div>
+							</div>
+							<div class="chat_history_messages_message chat_history_messages_message_left">
+								<div class="chat_history_messages_message_body">
+									<div class="chat_history_messages_message_body_user">
+										<img src="img/monkey_face.png" alt="">
+									</div>
+									<div class="chat_history_messages_message_body_text">
+										<span>Да в порядке вообще</span>
+									</div>
+								</div>
+							</div>
+							<div class="chat_history_messages_message chat_history_messages_message_right">
+								<div class="chat_history_messages_message_body">
+									<div class="chat_history_messages_message_body_user">
+										<img src="img/profile_photo.png" alt="">
+									</div>
+									<div class="chat_history_messages_message_body_text">
+										<span>От души</span>
+									</div>
+								</div>
+							</div>
+							<div class="chat_history_messages_message chat_history_messages_message_left">
+								<div class="chat_history_messages_message_body">
+									<div class="chat_history_messages_message_body_user">
+										<img src="img/monkey_face.png" alt="">
+									</div>
+									<div class="chat_history_messages_message_body_text">
+										<span>Валера, где дизайн?</span>
+									</div>
+								</div>
+							</div>
+							<div class="chat_history_messages_message chat_history_messages_message_right">
+								<div class="chat_history_messages_message_body">
+									<div class="chat_history_messages_message_body_user">
+										<img src="img/profile_photo.png" alt="">
+									</div>
+									<div class="chat_history_messages_message_body_text">
+										<span>Норм чатик замутил?</span>
+									</div>
+								</div>
+							</div>
+							<div class="chat_history_messages_message chat_history_messages_message_left">
+								<div class="chat_history_messages_message_body">
+									<div class="chat_history_messages_message_body_user">
+										<img src="img/monkey_face.png" alt="">
+									</div>
+									<div class="chat_history_messages_message_body_text">
+										<span>Да в порядке вообще</span>
+									</div>
+								</div>
+							</div>
+							<div class="chat_history_messages_message chat_history_messages_message_right">
+								<div class="chat_history_messages_message_body">
+									<div class="chat_history_messages_message_body_user">
+										<img src="img/profile_photo.png" alt="">
+									</div>
+									<div class="chat_history_messages_message_body_text">
+										<span>От души</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="chat_form">
+						<textarea class="chat_form_input" placeholder="Введите сообщение..."></textarea>
+						<button  class="chat_form_send"><img src="img/submit_button.png" alt="popup_content_image"></button>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -576,9 +656,9 @@
 				</div>
 			</div>
 			<div class="main_block_center_content" id="menu_p2p">
-				<div class="create_an_offer">
+				<div class="blocks_between_replay">
 					<button class="btn btn-purple btn-middle"><img src="img/arrow_in_top_white.png" alt="">Создать предложение на покупку</button>
-					<img class="create_an_offer_replay" src="img/replay_white.png" alt="">
+					<img class="blocks_between_replay_icon" src="img/replay_white.png" alt="">
 					<button class="btn btn-pink btn-middle"><img src="img/arrow_in_bottom_white.png" alt="">Создать предложение на покупку</button>
 				</div>
 				<div class="black_box">
