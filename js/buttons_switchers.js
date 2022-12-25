@@ -19,19 +19,29 @@ function showPopup(content_type){
 		document.body.style.paddingRight = "8px";
 		popup_wrap.addEventListener("click",function(e){
 			if(e.target.id=="popup_close"||e.target.id=="popup_wrap"){
-				console.log("test");
-				popup_wrap.style.display="none";
-				document.querySelector(`.${content_type}`).style.display="none";
-				document.body.style.overflow = "visible";
-				document.body.style.paddingRight = "0px";
+				closePopup();
 			}
 		})
 	}
 }
-showPopup("popup_type_chat");
+function closePopup(){
+	const popup_types = document.getElementsByClassName("popup_content");
+	for (let i = 0; i < popup_types.length; i++) {
+		popup_types[i].style.display = "none";
+	}
+	popup_wrap.style.display="none";
+	document.body.style.overflow = "visible";
+	document.body.style.paddingRight = "0px";
+}
 
-forCopy_button.addEventListener("click",function(){
-	var str = forCopyText.innerText;
+function copyTextFromButton(textBlock){
+	document.getElementById(`${textBlock}`).style.boxShadow ="0 0 10px rgba(255,255,255,0.9)";
+	document.getElementById(`${textBlock}`).style.backgroundColor ="rgba(255,255,255,0.5)";
+    setTimeout(function(){
+    	document.getElementById(`${textBlock}`).style.boxShadow ="0 0 10px rgba(255,255,255,0)";
+    	document.getElementById(`${textBlock}`).style.backgroundColor ="transparent";
+    },600)
+	var str = document.getElementById(`${textBlock}`).innerText;
 	const el = document.createElement('textarea');
     el.value = str;
     el.setAttribute('readonly', '');
@@ -41,7 +51,7 @@ forCopy_button.addEventListener("click",function(){
     el.select();
     document.execCommand('copy');
     document.body.removeChild(el);
-})
+}
 
 function p2p_turn_on_page(page){
 	let pages = ["p2p_my_trades","p2p_sell","p2p_my_offers","p2p_archive","p2p_buy"];
@@ -70,7 +80,17 @@ function market_turn_on_page(page){
 		document.getElementById(`${page}`).style.display="none";
 		document.getElementById(`${page}_button`).classList.remove("black_box_header_menu_button_active");
 	})
-
 	document.getElementById(`${page}`).style.display="block";
 	document.getElementById(`${page}_button`).classList.add("black_box_header_menu_button_active");
 }
+
+function make_active_smile(smile_munber){
+	const smiles = document.getElementsByClassName("smile_rate_item");
+	for (let i = 0; i < smiles.length; i++) {
+		smiles[i].classList.remove("smile_rate_item_active");
+	}
+	smiles[smile_munber].classList.add("smile_rate_item_active");
+}
+
+closePopup();
+showPopup("popup_type_my_coins");

@@ -118,6 +118,530 @@
 					</div>
 				</div>
 			</div>
+			<div class="popup_content popup_type_payment_details">
+				<p class="popup_content_title popup_content_title-left mb30">Платёжные данные</p>
+				<div class="df df-sb mb30">
+					<div class="black_box_elements_bills_element_item_with_image">
+						<div class="black_box_elements_bills_element_item">
+							<img class="black_box_elements_bills_element_item_avatar" src="img/monkey_face.png" alt="">
+							<div class="online"></div>
+						</div>
+						<div class="black_box_elements_bills_element_item">
+							<div class="black_box_elements_bills_element_item_top">
+								Продавец
+							</div>
+							<div class="black_box_elements_bills_element_item_bottom">
+								Игорь
+							</div>
+						</div>
+					</div>
+					<div class="black_box_elements_bills_element_item">
+						<div class="black_box_elements_bills_element_item_top">
+							Номер оффера
+						</div>
+						<div class="black_box_elements_bills_element_item_bottom black_box_elements_bills_element_item_bottom-right">
+							34
+						</div>
+					</div>
+				</div>
+				<p class="popup_content_title popup_content_title-small popup_content_title-left mb30">
+					Реквизиты
+				</p>
+				<div class="df df-sb mb30">
+					<div class="requisit">
+						<span class="grey_text">Сбербанк</span>
+						<div class="forCopy">
+							<div class="forCopy_text" id="forCopyText2">
+								4276 3800 9785 4124
+							</div>
+							<div class="forCopy_button" onclick="copyTextFromButton('forCopyText2')">
+								<img src="img/copy.png" alt="">
+							</div>
+						</div>
+					</div>
+					<div class="requisit">
+						<span class="grey_text">Тинькоф</span>
+						<div class="forCopy">
+							<div class="forCopy_text" id="forCopyText3">
+								4276 3800 9785 4124
+							</div>
+							<div class="forCopy_button" onclick="copyTextFromButton('forCopyText3')">
+								<img src="img/copy.png" alt="">
+							</div>
+						</div>
+					</div>
+					<div class="requisit">
+						<span class="grey_text">Qiwi</span>
+						<div class="forCopy">
+							<div class="forCopy_text" id="forCopyText4">
+								7 926 672 672
+							</div>
+							<div class="forCopy_button" onclick="copyTextFromButton('forCopyText4')">
+								<img src="img/copy.png" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="df df-sb df-ac">
+					<button class="btn btn-green btn-small" onclick="closePopup();showPopup('popup_type_wait_for_coins_unblock')">
+						<img src="img/white_card.png" alt=""> Подтвердить оплату
+					</button>
+					<div class="fsz14" style="margin:20px 0px;"><span class="grey_text">Сумма к оплате</span> 400 руб</div>
+				</div>
+			</div>
+			<div class="popup_content popup_type_wait_for_coins_unblock">
+				<p class="popup_content_title popup_content_title-middle mb30">Ожидайте разблокировки монет и зачисления их на ваш счет</p>
+				<img src="img/yellow_coins.png" alt="" class="popup_content_image-middle mb30">
+				<button class="btn btn-small btn-w100 btn-blue" onclick="closePopup()"><img src="img/close_image.png" alt=""> Назад</button>
+			</div>
+			<div class="popup_content popup_type_rate_deal">
+				<p class="popup_content_title popup_content_title-left mb30">Оцените сделку</p>
+				<div class="df df-sb mb30">
+					<div class="black_box_elements_bills_element_item_with_image">
+						<div class="black_box_elements_bills_element_item">
+							<img class="black_box_elements_bills_element_item_avatar" src="img/monkey_face.png" alt="">
+							<div class="online"></div>
+						</div>
+						<div class="black_box_elements_bills_element_item">
+							<div class="black_box_elements_bills_element_item_top">
+								Продавец
+							</div>
+							<div class="black_box_elements_bills_element_item_bottom">
+								Игорь
+							</div>
+						</div>
+					</div>
+					<div class="black_box_elements_bills_element_item">
+						<div class="black_box_elements_bills_element_item_top">
+							Сделок
+						</div>
+						<div class="black_box_elements_bills_element_item_bottom">
+							20
+						</div>
+					</div>
+					<div class="black_box_elements_bills_element_item">
+						<div class="black_box_elements_bills_element_item_top">
+							Рейтинг
+						</div>
+						<div class="black_box_elements_bills_element_item_bottom">
+							<img src="img/small_yellow_star.png" alt="">
+							<img src="img/small_yellow_star.png" alt="">
+							<img src="img/small_yellow_star.png" alt="">
+							<img src="img/small_yellow_star.png" alt="">
+							<img src="img/small_yellow_star.png" alt="">
+							100%
+						</div>
+					</div>
+				</div>
+				<hr style="border: 1px solid #25272C;margin-bottom:30px">
+				<div class="smile_rate mb30">
+					<div class="smile_rate_item smile_rate_item_active" onclick="make_active_smile(0)">
+						<div class="smile_rate_item_ellipse">
+							<img src="img/smile_fun.png" alt="">
+						</div>
+						<p class="grey_text">Отлично</p>
+					</div>
+					<div class="smile_rate_item" onclick="make_active_smile(1)">
+						<div class="smile_rate_item_ellipse">
+							<img src="img/smile_calm.png" alt="">
+						</div>
+						<p class="grey_text">Средне</p>
+					</div>
+					<div class="smile_rate_item" onclick="make_active_smile(2)">
+						<div class="smile_rate_item_ellipse">
+							<img src="img/smile_sad.png" alt="">
+						</div>
+						<p class="grey_text">Плохо</p>
+					</div>
+				</div>
+				<button class="btn btn-small btn-w100 btn-blue" onclick="closePopup();showPopup('popup_type_thanks_for_rate')"><img src="img/black_star.png" alt=""> Оценить</button>
+			</div>
+			<div class="popup_content popup_type_thanks_for_rate">
+				<p class="popup_content_title popup_content_title-middle">Спасибо за оценку!</p>
+				<p class="grey_text fsz14 mb30">Сделка закрыта и отправлена в архив</p>
+				<img src="img/yellow_box_with_arrow.png" alt="" class="popup_content_image-middle mb30">
+				<button class="btn btn-small btn-w100 btn-blue" onclick="closePopup()"><img src="img/close_image.png" alt=""> Закрыть</button>
+			</div>
+			<div class="popup_content popup_type_add_payment_type">
+				<p class="popup_content_title popup_content_title-middle">Добавление платёжных данных</p>
+				<p class="grey_text fsz14 mb30">Вы не можете менять реквизиты пока открыты сделки</p>
+				<img src="img/yellow_card.png" alt="" class="popup_content_image-middle mb30">
+				<button class="btn btn-small btn-w100 btn-blue" onclick="closePopup()"><img src="img/close_image.png" alt=""> Закрыть</button>
+			</div>
+			<div class="popup_content popup_type_change_offer_to_sell">
+				<p class="popup_content_title popup_content_title-middle">Изменение оффера на продажу</p>
+				<div class="df df-sb df-w100 fsz14">
+					<p>Ваш балланс - <span class="yellow_text">100</span></p>
+					<p>Курс - <span class="blue_text"> 6.491771</span></p>
+				</div>
+				<form action="" class="popup_content_form">
+					<label for="price_for_1qc" class="popup_content_form_label popup_content_form_label-small fsz10">Ваша цена за 1QC</label>
+					<input type="text" name="price_for_1qc" id="price_for_1qc" class="popup_content_form_input popup_content_form_input-small w50prc" placeholder="Ваша цена">
+					<p class="popup_content_form_text">Сколько QC продать?</p>
+					<div class="df">
+						<div class="tl">
+							<label for="how_many_qc" class="popup_content_form_label popup_content_form_label-small fsz10">Минимум от 15.35 QC</label>
+							<br>
+							<input type="text" name="how_many_qc" id="how_many_qc" class="popup_content_form_input popup_content_form_input-small" placeholder="Сколько?" value="16">
+						</div>
+						<div class="tl">
+							<label for="how_many_qc_got" class="popup_content_form_label popup_content_form_label-small fsz10">Вы получите</label>
+							<br>
+							<input type="text" name="how_many_qc_got" id="how_many_qc_got" class="popup_content_form_input popup_content_form_input-small" placeholder="Сколько?" value="80 руб.">
+						</div>
+					</div>
+					<p class="popup_content_form_text">Лимит на сделку (руб.)</p>
+					<div class="df mb15">
+						<div class="tl">
+							<label for="minimum_deal_limit" class="popup_content_form_label popup_content_form_label-small fsz10">Минимум</label>
+							<br>
+							<input type="text" name="minimum_deal_limit" id="minimum_deal_limit" class="popup_content_form_input popup_content_form_input-small" placeholder="Сколько?" value="5">
+						</div>
+						<div class="tl">
+							<label for="maximum_deal_limit" class="popup_content_form_label popup_content_form_label-small fsz10">Максимум</label>
+							<br>
+							<input type="text" name="maximum_deal_limit" id="maximum_deal_limit" class="popup_content_form_input popup_content_form_input-small" placeholder="Сколько?" value="80">
+						</div>
+					</div>
+					<div class="df df-w100 df-sb df-ac mb15">
+						<p class="popup_content_form_text">Способ оплаты</p>
+						<div>
+							<input type="checkbox" class="custom-checkbox" id="paytype_sberbank" name="paytype" value="paytype_sberbank">
+							<label for="paytype_sberbank" class="popup_content_form_text">Сбербанк</label>
+						</div>
+					</div>
+					<div class="df mb15">
+						<div class="btn btn-small btn-blue m5">
+							<img src="img/reverse.png" alt="">Изменить
+						</div>
+						<div class="btn btn-small btn-yellow m5">
+							<img src="img/stop_circle.png" alt="">Приостановить
+						</div>
+						<div class="btn btn-small btn-red m5">
+							<img src="img/delete_circle.png" alt="">Удалить
+						</div>
+					</div>
+					<p class="popup_content_form_text tl">Время на сделку <span class="yellow_text">30 минут</span></p>
+				</form>
+			</div>
+			<div class="popup_content popup_type_invoicing_h2h">
+				<p class="popup_content_title popup_content_title-middle">Выставление счета H2H</p>
+				<div class="df df-sb df-w100 fsz14">
+					<p><img src="img/yellow_coins_small.png" alt="" style="height:14px;"> Ваш бонус: <span class="yellow_text">10%</span></p>
+					<p><img src="img/blue_chart_small.png" alt="" style="height:14px;"> Курс: <span class="blue_text"> 6.491771</span></p>
+				</div>
+				<form action="" class="popup_content_form">
+					
+					<p class="popup_content_form_text tl grey_text">Добавьте минимум 1 сферу деятельности</p>
+					<input type="checkbox" class="custom-checkbox" id="field_of_activity_taxi" name="field_of_activity" value="taxi">
+					<label for="field_of_activity_taxi" class="popup_content_form_text">Такси</label>
+
+					<input type="checkbox" class="custom-checkbox" id="field_of_activity_kurier" name="field_of_activity" value="kurier">
+					<label for="field_of_activity_kurier" class="popup_content_form_text">Курьер</label>
+
+					<input type="checkbox" class="custom-checkbox" id="field_of_activity_kosmetology" name="field_of_activity" value="kosmetology">
+					<label for="field_of_activity_kosmetology" class="popup_content_form_text">Косметология</label>
+
+					<input type="checkbox" class="custom-checkbox" id="field_of_activity_cleaning" name="field_of_activity" value="cleaning">
+					<label for="field_of_activity_cleaning" class="popup_content_form_text">Бытовые, клининговые услуги</label>
+					<div class="mb30"></div>
+					<div class="df">
+						<div class="btn btn-small btn-blue">
+							<img src="img/save_ico.png" alt="">Сохранить
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="popup_content popup_type_invoicing_h2h_addition">
+				<p class="popup_content_title popup_content_title-middle">Выставление счета H2H</p>
+				<div class="df df-sb df-w100 fsz14">
+					<p><img src="img/yellow_coins_small.png" alt="" style="height:14px;"> Ваш бонус: <span class="yellow_text">10%</span></p>
+					<p><img src="img/blue_chart_small.png" alt="" style="height:14px;"> Курс: <span class="blue_text"> 6.491771</span></p>
+				</div>
+				<form action="" class="popup_content_form">
+					
+					<p class="popup_content_form_text tl grey_text">За что оплата?</p>
+					<input type="checkbox" class="custom-checkbox" id="field_of_activity_taxi" name="field_of_activity" value="taxi">
+					<label for="field_of_activity_taxi" class="popup_content_form_text">Такси</label>
+
+					<input type="checkbox" class="custom-checkbox" id="field_of_activity_kurier" name="field_of_activity" value="kurier">
+					<label for="field_of_activity_kurier" class="popup_content_form_text">Курьер</label>
+
+					<input type="checkbox" class="custom-checkbox" id="field_of_activity_kosmetology" name="field_of_activity" value="kosmetology">
+					<label for="field_of_activity_kosmetology" class="popup_content_form_text">Косметология</label>
+
+					<input type="checkbox" class="custom-checkbox" id="field_of_activity_cleaning" name="field_of_activity" value="cleaning">
+					<label for="field_of_activity_cleaning" class="popup_content_form_text">Бытовые, клининговые услуги</label>
+					<div class="mb30"></div>
+					<p class="popup_content_form_text tl grey_text">Фиксировать курс на 24 часа?</p>
+					<div class="df">
+						<input type="radio" name="fix_it" id="fix_it_yes" value="yes" class="custom-radio" checked><label for="fix_it_yes" class="popup_content_form_text" style="margin-right:30px">Да</label>
+						<input type="radio" name="fix_it" id="fix_it_no" value="no" class="custom-radio"><label for="fix_it_no" class="popup_content_form_text">Нет</label>
+					</div>
+					<div class="mb30"></div>
+					<div class="df">
+						<div class="tl">
+							<label for="h2h_how_many_qc" class="popup_content_form_label popup_content_form_label-small fsz10">Введите сумму в рублях</label>
+							<br>
+							<input type="text" name="h2h_how_many_qc" id="h2h_how_many_qc" class="popup_content_form_input popup_content_form_input-small" placeholder="Сколько?" value="5 руб">
+						</div>
+						<div class="tl">
+							<label for="how_many_qc_code" class="popup_content_form_label popup_content_form_label-small fsz10">Введите код плательщика</label>
+							<br>
+							<input type="text" name="how_many_qc_code" id="how_many_qc_code" class="popup_content_form_input popup_content_form_input-small" placeholder="Код плательшика" value="80">
+						</div>
+					</div>
+					<div class="mb30"></div>
+					<div class="df">
+						<div class="btn btn-small btn-blue">
+							<img src="img/bill.png" alt="">Выставить счет
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="popup_content popup_type_offer_pause">
+				<p class="popup_content_title popup_content_title-middle">Оффер приостановлен</p>
+				<img src="img/yellow_pause.png" alt="" class="popup_content_image-middle mb30">
+				<button class="btn btn-small btn-w100 btn-blue" onclick="closePopup()"><img src="img/close_image.png" alt=""> Закрыть</button>
+			</div>
+			<div class="popup_content popup_type_offer_deleted">
+				<p class="popup_content_title popup_content_title-middle">Оффер удален</p>
+				<img src="img/yellow_stop.png" alt="" class="popup_content_image-middle mb30">
+				<button class="btn btn-small btn-w100 btn-blue" onclick="closePopup()"><img src="img/close_image.png" alt=""> Закрыть</button>
+			</div>
+			<div class="popup_content popup_type_offer_saved">
+				<p class="popup_content_title popup_content_title-middle">Данные успешно сохранены</p>
+				<img src="img/yellow_save.png" alt="" class="popup_content_image-middle mb30">
+				<button class="btn btn-small btn-w100 btn-blue" onclick="closePopup()"><img src="img/close_image.png" alt=""> Закрыть</button>
+			</div>
+			<div class="popup_content popup_type_offer_cant_change_requisits">
+				<p class="popup_content_title popup_content_title-small">Вы не можете менять реквизиты пока сделки открыты</p>
+				<img src="img/yellow_warning.png" alt="" class="popup_content_image-middle mb30">
+				<button class="btn btn-small btn-w100 btn-blue" onclick="closePopup()"><img src="img/close_image.png" alt=""> Закрыть</button>
+			</div>
+			<div class="popup_content popup_type_archived_bills">
+				<p class="popup_content_title popup_content_title-middle popup_content_title-left">Архивные счета</p>
+				<p class="grey_text fsz14 mb30 tl">Всего получено бонусов и скидок <span class="yellow_text">5.6 руб.</span></p>
+				
+					
+				<div class="black_box_elements_bills mb30">
+					<div class="black_box_elements_bills_element">
+						<div class="black_box_elements_bills_element_item">
+							<div class="black_box_elements_bills_element_item_top">
+								Продавец
+							</div>
+							<div class="black_box_elements_bills_element_item_bottom">
+								<img src="img/arrow_in_top.png" alt="">Вы
+							</div>
+						</div>
+						<div class="black_box_elements_bills_element_item">
+							<div class="black_box_elements_bills_element_item_top">
+								RUB
+							</div>
+							<div class="black_box_elements_bills_element_item_bottom">
+								43
+							</div>
+						</div>
+						<div class="black_box_elements_bills_element_item">
+							<div class="black_box_elements_bills_element_item_top">
+								QC
+							</div>
+							<div class="black_box_elements_bills_element_item_bottom">
+								6.559
+							</div>
+						</div>
+						<div class="black_box_elements_bills_element_item">
+							<div class="black_box_elements_bills_element_item_top">
+								Дата
+							</div>
+							<div class="black_box_elements_bills_element_item_bottom">
+								09.11.22 17:54:09
+							</div>
+						</div>
+						<div class="black_box_elements_bills_element_item">
+							<div class="black_box_elements_bills_element_item_top">
+								Бонус 10%
+							</div>
+							<div class="black_box_elements_bills_element_item_bottom">
+								<span class="yellow_text">4</span> руб, <span class="yellow_text">0.66</span> QC
+							</div>
+						</div>
+						<div class="black_box_elements_bills_element_item">
+							<div class="black_box_elements_bills_element_item_top">
+								Статус
+							</div>
+							<div class="black_box_elements_bills_element_item_bottom">
+								<img src="img/done_circle.png" alt="">Оплачен
+							</div>
+						</div>
+					</div>
+					<div class="black_box_elements_bills_element">
+						<div class="black_box_elements_bills_element_item">
+							<div class="black_box_elements_bills_element_item_top">
+								Продавец
+							</div>
+							<div class="black_box_elements_bills_element_item_bottom">
+								<img src="img/arrow_in_top.png" alt="">Вы
+							</div>
+						</div>
+						<div class="black_box_elements_bills_element_item">
+							<div class="black_box_elements_bills_element_item_top">
+								RUB
+							</div>
+							<div class="black_box_elements_bills_element_item_bottom">
+								43
+							</div>
+						</div>
+						<div class="black_box_elements_bills_element_item">
+							<div class="black_box_elements_bills_element_item_top">
+								QC
+							</div>
+							<div class="black_box_elements_bills_element_item_bottom">
+								6.559
+							</div>
+						</div>
+						<div class="black_box_elements_bills_element_item">
+							<div class="black_box_elements_bills_element_item_top">
+								Дата
+							</div>
+							<div class="black_box_elements_bills_element_item_bottom">
+								09.11.22 17:54:09
+							</div>
+						</div>
+						<div class="black_box_elements_bills_element_item">
+							<div class="black_box_elements_bills_element_item_top">
+								Бонус 10%
+							</div>
+							<div class="black_box_elements_bills_element_item_bottom">
+								<span class="yellow_text">4</span> руб, <span class="yellow_text">0.66</span> QC
+							</div>
+						</div>
+						<div class="black_box_elements_bills_element_item">
+							<div class="black_box_elements_bills_element_item_top">
+								Статус
+							</div>
+							<div class="black_box_elements_bills_element_item_bottom">
+								<img src="img/done_circle.png" alt="">Оплачен
+							</div>
+						</div>
+					</div>
+					<div class="black_box_elements_bills_element">
+						<div class="black_box_elements_bills_element_item">
+							<div class="black_box_elements_bills_element_item_top">
+								Продавец
+							</div>
+							<div class="black_box_elements_bills_element_item_bottom">
+								<img src="img/arrow_in_top.png" alt="">Вы
+							</div>
+						</div>
+						<div class="black_box_elements_bills_element_item">
+							<div class="black_box_elements_bills_element_item_top">
+								RUB
+							</div>
+							<div class="black_box_elements_bills_element_item_bottom">
+								43
+							</div>
+						</div>
+						<div class="black_box_elements_bills_element_item">
+							<div class="black_box_elements_bills_element_item_top">
+								QC
+							</div>
+							<div class="black_box_elements_bills_element_item_bottom">
+								6.559
+							</div>
+						</div>
+						<div class="black_box_elements_bills_element_item">
+							<div class="black_box_elements_bills_element_item_top">
+								Дата
+							</div>
+							<div class="black_box_elements_bills_element_item_bottom">
+								09.11.22 17:54:09
+							</div>
+						</div>
+						<div class="black_box_elements_bills_element_item">
+							<div class="black_box_elements_bills_element_item_top">
+								Бонус 10%
+							</div>
+							<div class="black_box_elements_bills_element_item_bottom">
+								<span class="yellow_text">4 </span> руб, <span class="yellow_text">0.66 </span> QC
+							</div>
+						</div>
+						<div class="black_box_elements_bills_element_item">
+							<div class="black_box_elements_bills_element_item_top">
+								Статус
+							</div>
+							<div class="black_box_elements_bills_element_item_bottom">
+								<img src="img/done_circle.png" alt="">Оплачен
+							</div>
+						</div>
+					</div>
+				</div>
+
+				
+				<button class="btn btn-small btn-w100 btn-blue" onclick="closePopup()"><img src="img/close_image.png" alt=""> Закрыть</button>
+			</div>
+			<div class="popup_content popup_type_my_coins">
+				<p class="popup_content_title popup_content_title-middle mb30">Мои монеты QOG</p>
+				<div class="df df-w100 df-sb mb30 df-jc">
+					<div class="my_coins_info_item">
+						<p class="grey_text fsz14">Ваш баланс QC</p>
+						<img src="img/yellow_card.png" alt="">
+						<p class="my_coins_info_item_whitetext">
+							102.1946
+						</p>
+					</div>
+					<div class="my_coins_info_item">
+						<p class="grey_text fsz14">Общая сумма</p>
+						<img src="img/yellow_coins.png" alt="">
+						<p class="my_coins_info_item_whitetext">
+							47.3 руб.
+						</p>
+					</div>
+					<div class="my_coins_info_item">
+						<p class="grey_text fsz14">Сумма бонусов</p>
+						<img src="img/yellow_present.png" alt="">
+						<p class="my_coins_info_item_whitetext">
+							4.3 руб.
+						</p>
+					</div>
+				</div>
+				<p class="grey_text fsz14 mb30">Все монеты автоматически обмениваются через 24 часа с момента оплаты.</p>
+				<button class="btn btn-small btn-w100 btn-blue" onclick="closePopup()"><img src="img/arrow_in_bottom_black.png" alt=""> Обменять для продажи</button>
+			</div>
+			<div class="popup_content popup_type_buy_coins">
+				<p class="popup_content_title popup_content_title-middle mb30">Покупка монет Quantum Coin</p>
+				<div class="df">
+					<p class="grey_text fsz14" style="margin-right:20px;">
+						Для активации кощелька необходимо приобрести монеты
+					</p>
+					<p class="fsz14"><img src="img/blue_chart_small.png" alt="" style="height:14px;"> Курс: <span class="blue_text"> 6.491771</span></p>
+				</div>
+				<div class="df df-w100 df-sb mb30 df-jc">
+					<div class="my_coins_info_item my_coins_info_item-vip">
+						<img src="img/vip1.png" alt="">
+						<p class="my_coins_info_item_whitetext">
+							VIP 1
+						</p>
+						<p class="fsz12">При покупкe <br>от 195 до 4881 монет</p>
+					</div>
+					<div class="my_coins_info_item my_coins_info_item-vip">
+						<img src="img/vip2.png" alt="">
+						<p class="my_coins_info_item_whitetext">
+							VIP 2
+						</p>
+						<p class="fsz12">При покупке <br>от 4881 до 19526 монет</p>
+					</div>
+					<div class="my_coins_info_item my_coins_info_item-vip">
+						<img src="img/vip3.png" alt="">
+						<p class="my_coins_info_item_whitetext">
+							VIP 3
+						</p>
+						<p class="fsz12">При покупке <br>от 19526 монет</p>
+					</div>
+				</div>
+				<p class="grey_text fsz14 mb30">Все монеты автоматически обмениваются через 24 часа с момента оплаты.</p>
+				<button class="btn btn-small btn-w100 btn-blue" onclick="closePopup()"><img src="img/arrow_in_bottom_black.png" alt=""> Обменять для продажи</button>
+			</div>
 		</div>
 	</div>
 	<div class="drop_down_menu" id="drop_down_menu">
@@ -320,7 +844,7 @@
 							<div class="forCopy_text"  id="forCopyText">
 								QCstaslDHISjDf3wFohTorOwmdoaGD0tSAOofvbo08
 							</div>
-							<div class="forCopy_button" id="forCopy_button">
+							<div class="forCopy_button" onclick="copyTextFromButton('forCopyText')">
 								<img src="img/copy.png" alt="">
 							</div>
 						</div>
