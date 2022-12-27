@@ -93,5 +93,4 @@ function make_active_smile(smile_munber){
 }
 
 closePopup();
-showPopup("popup_type_my_coins");
-//test
+//showPopup("popup_type_buy_coins");

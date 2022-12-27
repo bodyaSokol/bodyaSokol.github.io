@@ -617,30 +617,63 @@
 					<p class="fsz14"><img src="img/blue_chart_small.png" alt="" style="height:14px;"> Курс: <span class="blue_text"> 6.491771</span></p>
 				</div>
 				<div class="df df-w100 df-sb mb30 df-jc">
-					<div class="my_coins_info_item my_coins_info_item-vip">
-						<img src="img/vip1.png" alt="">
-						<p class="my_coins_info_item_whitetext">
-							VIP 1
-						</p>
-						<p class="fsz12">При покупкe <br>от 195 до 4881 монет</p>
+					<div class="buy_coins_item buy_coins_item-blue">
+						<div class="buy_coins_item-inner">
+							<img src="img/vip1.png" alt="">
+							<p class="buy_coins_item_title">
+								VIP 1
+							</p>
+							<p class="fsz12">При покупкe <br>от 195 до 4881 монет</p>
+						</div>
 					</div>
-					<div class="my_coins_info_item my_coins_info_item-vip">
-						<img src="img/vip2.png" alt="">
-						<p class="my_coins_info_item_whitetext">
-							VIP 2
-						</p>
-						<p class="fsz12">При покупке <br>от 4881 до 19526 монет</p>
+					<div class="buy_coins_item buy_coins_item-pink">
+						<div class="buy_coins_item-inner">
+							<img src="img/vip2.png" alt="">
+							<p class="buy_coins_item_title">
+								VIP 2
+							</p>
+							<p class="fsz12">При покупке <br>от 4881 до 19526 монет</p>
+						</div>
 					</div>
-					<div class="my_coins_info_item my_coins_info_item-vip">
-						<img src="img/vip3.png" alt="">
-						<p class="my_coins_info_item_whitetext">
-							VIP 3
-						</p>
-						<p class="fsz12">При покупке <br>от 19526 монет</p>
+					<div class="buy_coins_item buy_coins_item-yellow">
+						<div class="buy_coins_item-inner">
+							<img src="img/vip3.png" alt="">
+							<p class="buy_coins_item_title">
+								VIP 3
+							</p>
+							<p class="fsz12">При покупке <br>от 19526 монет</p>
+						</div>
 					</div>
 				</div>
-				<p class="grey_text fsz14 mb30">Все монеты автоматически обмениваются через 24 часа с момента оплаты.</p>
-				<button class="btn btn-small btn-w100 btn-blue" onclick="closePopup()"><img src="img/arrow_in_bottom_black.png" alt=""> Обменять для продажи</button>
+				<form action="" class="popup_content_form">
+					
+					
+					<div class="df">
+						<div class="tl">
+							<p class="grey_text fsz12">Банковские карты</p>
+							<input type="radio" name="buy_coin_pay_type" id="buy_coin_pay_type_cards" value="cards" class="custom-radio" checked><label for="buy_coin_pay_type_cards" class="popup_content_form_text" style="margin-right:30px">МИР, VISA, MASTERCARD</label>
+						</div>
+						<div class="tl">
+							<p class="grey_text fsz12">Электронные платежи</p>
+							<input type="radio" name="buy_coin_pay_type" id="buy_coin_pay_type_payments" value="payments" class="custom-radio"><label for="buy_coin_pay_type_payments" class="popup_content_form_text">QIWI WALLET</label>
+						</div>
+					</div>
+					<div class="mb30"></div>
+					<p class="grey_text fsz12 tl">Минимум 21 QC. Максимум 19512 QC.</p>
+					<div class="df">
+						
+						<input type="text" name="h2h_how_many_qc" id="h2h_how_many_qc" class="popup_content_form_input popup_content_form_input-small" placeholder="Сколько?" value="...">
+						<button class="btn btn-green btn-small">
+							<img src="img/white_card.png" alt=""> Подтвердить пополнение
+						</button>
+						
+					</div>
+					<div class="mb30"></div>
+				</form>
+				<div class="df">
+					<img src="img/warning_circle.png" alt="" style="width: 17px;height: 17px;margin-right: 10px;">
+					<span class="tl fsz12">Монеты можно купить только 1 раз! <br>Далее покупку и продажу можно осуществлять на бирже.</span>
+				</div>
 			</div>
 		</div>
 	</div>
